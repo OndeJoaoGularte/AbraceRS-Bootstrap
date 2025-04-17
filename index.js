@@ -1,16 +1,16 @@
 let count = 1;
 document.getElementById("radio1").checked = true;
 
-setInterval(function(){
+setInterval(function () {
     proxImage();
 }, 5000)
 
-function proxImage(){
+function proxImage() {
     count++;
-    if(count > 4){
+    if (count > 4) {
         count = 1;
     }
-    document.getElementById("radio"+count).checked = true;
+    document.getElementById("radio" + count).checked = true;
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -33,7 +33,7 @@ function abrirQRCode() {
     const modal = document.getElementById("popQrCode");
     modal.style.display = "flex";
 
-    window.onclick = function(event) {
+    window.onclick = function (event) {
         if (event.target === modal) {
             fecharQRCode();
         }

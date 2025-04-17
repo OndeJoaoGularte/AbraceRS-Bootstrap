@@ -1,4 +1,4 @@
-:root{
+:root {
     --cor-principal: #23BEE1;
     --cor-secundaria: #D76978;
 
@@ -10,7 +10,7 @@
     --tamanho-fonte6: 2.2em;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     outline: 0;
@@ -19,11 +19,11 @@
     box-sizing: border-box;
 }
 
-html{
+html {
     font-size: 14px;
 }
 
-body{
+body {
     height: 100vh;
     width: 100vw;
     font-family: 'Nunito', 'Roboto', sans-serif;
@@ -32,31 +32,31 @@ body{
 
 /* Header */
 
-header{
+header {
     display: flex;
     background-color: var(--cor-principal);
     flex-direction: column;
     align-items: center;
 }
 
-header img{
+header img {
     margin: 25px 0;
     max-height: 150px;
     max-width: 150px;
 }
 
-nav{
+nav {
     width: 100%;
     border-top: solid 2px white;
 }
 
-nav ul{
+nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
 }
 
-nav ul li{
+nav ul li {
     margin: 5px 10px;
 }
 
@@ -84,7 +84,7 @@ nav a:hover::after {
     transform: scaleX(1);
 }
 
-.barra-fixa{
+.barra-fixa {
     position: fixed;
     top: 0;
     left: 0;
@@ -94,18 +94,18 @@ nav a:hover::after {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.barra-fixa ul{
+.barra-fixa ul {
     padding-left: 15px;
 }
 
 /*  */
 
 /* Carrossel */
-.carrossel{
+.carrossel {
     padding-top: 35px;
 }
 
-.slider{
+.slider {
     margin: 0 auto;
     width: 700px;
     height: 400px;
@@ -113,26 +113,26 @@ nav a:hover::after {
     border-radius: 25px;
 }
 
-.slides{
+.slides {
     width: 400%;
     display: flex;
 }
 
-.slides input{
+.slides input {
     display: none;
 }
 
-.slide{
+.slide {
     width: 25%;
     position: relative;
     transition: 2s;
 }
 
-.slide img{
+.slide img {
     width: 700px;
 }
 
-.labels{
+.labels {
     position: absolute;
     width: 700px;
     margin-top: 360px;
@@ -140,7 +140,7 @@ nav a:hover::after {
     justify-content: center;
 }
 
-.manual-btn{
+.manual-btn {
     border: 2px solid white;
     padding: 5px;
     border-radius: 10px;
@@ -150,30 +150,30 @@ nav a:hover::after {
 }
 
 .manual-btn:hover,
-#radio1:checked ~ .navegacao .auto-btn1,
-#radio2:checked ~ .navegacao .auto-btn2,
-#radio3:checked ~ .navegacao .auto-btn3,
-#radio4:checked ~ .navegacao .auto-btn4 {
+#radio1:checked~.navegacao .auto-btn1,
+#radio2:checked~.navegacao .auto-btn2,
+#radio3:checked~.navegacao .auto-btn3,
+#radio4:checked~.navegacao .auto-btn4 {
     background-color: white;
 }
 
-#radio1:checked ~ .first{
+#radio1:checked~.first {
     margin-left: 0;
 }
 
-#radio2:checked ~ .first{
+#radio2:checked~.first {
     margin-left: -25%;
 }
 
-#radio3:checked ~ .first{
+#radio3:checked~.first {
     margin-left: -50%;
 }
 
-#radio4:checked ~.first{
+#radio4:checked~.first {
     margin-left: -75%;
 }
 
-.navegacao div{
+.navegacao div {
     border: 2px solid white;
     padding: 5px;
     border-radius: 10px;
@@ -181,7 +181,7 @@ nav a:hover::after {
     transition: 1s;
 }
 
-.navegacao{
+.navegacao {
     position: absolute;
     width: 700px;
     margin-top: 360px;
@@ -194,7 +194,7 @@ nav a:hover::after {
 
 /* Divisórias */
 
-.apelo{
+.apelo {
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -203,20 +203,20 @@ nav a:hover::after {
     padding: 35px 0;
 }
 
-.apelo h2{
+.apelo h2 {
     color: var(--cor-principal);
     font-size: var(--tamanho-fonte6);
     text-align: center;
 }
 
 .apelo h2:nth-child(2),
-.apelo2 h2:nth-child(2){
+.apelo2 h2:nth-child(2) {
     font-size: var(--tamanho-fonte6);
     text-decoration: underline;
     font-weight: bold;
 }
 
-.apelo2{
+.apelo2 {
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -225,13 +225,13 @@ nav a:hover::after {
     padding: 70px 0;
 }
 
-.apelo2 h2{
+.apelo2 h2 {
     color: var(--cor-secundaria);
     font-size: var(--tamanho-fonte6);
     text-align: center;
 }
 
-.apelo3{
+.apelo3 {
     background-color: var(--cor-secundaria);
     border-top: solid black 2px;
     display: flex;
@@ -240,7 +240,7 @@ nav a:hover::after {
     padding: 50px 0;
 }
 
-.apelo3 h2{
+.apelo3 h2 {
     color: white;
     font-size: var(--tamanho-fonte6);
 }
@@ -249,7 +249,7 @@ nav a:hover::after {
 
 /* Conteudo */
 
-.doar{
+.doar {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -264,7 +264,7 @@ nav a:hover::after {
     padding: 15px;
 }
 
-.doar .dados{
+.doar .dados {
     display: flex;
     flex-direction: row;
     gap: 25px;
@@ -272,12 +272,12 @@ nav a:hover::after {
     justify-content: center;
 }
 
-.doar .qrcode img{
+.doar .qrcode img {
     width: 150px;
     border-radius: 25px;
 }
 
-.quem-somos{
+.quem-somos {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -286,23 +286,23 @@ nav a:hover::after {
     gap: 25px;
 }
 
-.quem-somos h1{
+.quem-somos h1 {
     text-align: center;
 }
 
 .quem-somos p,
-.como-atuamos p{
+.como-atuamos p {
     text-align: justify;
 }
 
-.quem-somos-texto{
+.quem-somos-texto {
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 15px;
 }
 
-.quem-somos-fotos{
+.quem-somos-fotos {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -311,22 +311,22 @@ nav a:hover::after {
     gap: 25px;
 }
 
-.quem-somos-fotos img{
+.quem-somos-fotos img {
     height: 180px;
     border: solid black 2px;
 }
 
-.quem-somos-fotos strong{
+.quem-somos-fotos strong {
     color: var(--cor-secundaria);
 }
 
-.diretoria{
+.diretoria {
     display: flex;
     flex-direction: row;
     gap: 25px;
 }
 
-.diretoria div{
+.diretoria div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -334,11 +334,11 @@ nav a:hover::after {
     width: 180px;
 }
 
-.diretoria div .nome{
+.diretoria div .nome {
     margin: 5px 0;
 }
 
-.como-atuamos{
+.como-atuamos {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -349,13 +349,13 @@ nav a:hover::after {
     background: linear-gradient(0deg, white 0%, white 0%, #D76978 100%);
 }
 
-.campanha{
+.campanha {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-.campanha img{
+.campanha img {
     width: 50%;
     border: solid 2px black;
     border-radius: 15px;
@@ -365,7 +365,7 @@ nav a:hover::after {
 
 /* Footer */
 
-footer .contato{
+footer .contato {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -374,18 +374,18 @@ footer .contato{
     gap: 25px;
 }
 
-footer img{
+footer img {
     height: 24px;
 }
 
-footer .contato .fone{
+footer .contato .fone {
     display: flex;
     flex-direction: column;
     gap: 5px;
     width: 300px;
 }
 
-footer .contato .fone div{
+footer .contato .fone div {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -393,7 +393,7 @@ footer .contato .fone div{
     gap: 5px;
 }
 
-footer .contato .loc{
+footer .contato .loc {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -402,7 +402,7 @@ footer .contato .loc{
     width: 300px;
 }
 
-footer .contato .redes{
+footer .contato .redes {
     display: flex;
     gap: 20px;
     flex-direction: row;
@@ -424,7 +424,7 @@ footer .contato .redes{
     transform: scale(1.2);
 }
 
-footer .dev{
+footer .dev {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -504,11 +504,11 @@ footer .dev{
         gap: 10px;
     }
 
-    .barra-fixa ul{
+    .barra-fixa ul {
         padding-left: 0px;
     }
 
-    .carrossel{
+    .carrossel {
         padding-top: 0px;
     }
 
@@ -518,93 +518,93 @@ footer .dev{
         border-radius: 0;
     }
 
-    .labels{
+    .labels {
         width: 100%;
         margin-top: 50%;
     }
 
-    .slide img{
+    .slide img {
         width: 100%;
     }
-    
-    .navegacao{
+
+    .navegacao {
         width: 100%;
         margin-top: 50%;
     }
-    
-    .apelo h2{
+
+    .apelo h2 {
         color: var(--cor-principal);
         font-size: var(--tamanho-fonte4);
         text-align: center;
     }
 
-    .apelo h2:nth-child(2){
+    .apelo h2:nth-child(2) {
         font-size: var(--tamanho-fonte6);
         text-decoration: underline;
         font-weight: bold;
     }
 
-    .apelo2 h2{
+    .apelo2 h2 {
         color: var(--cor-principal);
         font-size: var(--tamanho-fonte4);
         text-align: center;
     }
 
-    .apelo2 h2:nth-child(2){
+    .apelo2 h2:nth-child(2) {
         font-size: var(--tamanho-fonte6);
         text-decoration: underline;
         font-weight: bold;
     }
 
-    .apelo3{
+    .apelo3 {
         padding: 50px 0;
     }
-    
-    .apelo3 h2{
+
+    .apelo3 h2 {
         font-size: var(--tamanho-fonte4);
     }
 
-    .doar{
+    .doar {
         border-radius: 0px;
         border: solid 0px black;
         width: 100%;
         margin-bottom: 35px;
     }
 
-    .quem-somos{
+    .quem-somos {
         padding: 0 50px;
         font-size: var(--tamanho-fonte1);
     }
 
-    .diretoria{
+    .diretoria {
         flex-wrap: wrap;
         justify-content: center;
     }
 
-    .quem-somos-fotos img{
+    .quem-somos-fotos img {
         height: 150px;
     }
 
-    .diretoria div{
+    .diretoria div {
         width: 150px;
     }
 
-    .diretoria div .nome{
+    .diretoria div .nome {
         font-size: var(--tamanho-fonte1);
         margin: 2px 0;
     }
 
-    .diretoria div strong{
+    .diretoria div strong {
         font-size: var(--tamanho-fonte1);
     }
 
-    .como-atuamos{
+    .como-atuamos {
         padding: 0px 50px;
         font-size: var(--tamanho-fonte1);
         padding-bottom: 15px;
     }
 
-    .campanha img{
+    .campanha img {
         width: 100%;
         border-radius: 0px;
         border: 0px;
@@ -612,20 +612,20 @@ footer .dev{
         border-bottom: 2px solid black;
     }
 
-    footer{
+    footer {
         font-size: var(--tamanho-fonte1);
     }
 
-    footer .contato{
+    footer .contato {
         gap: 5px;
         flex-direction: column;
     }
 
-    footer img{
+    footer img {
         height: 24px;
     }
 
-    footer .contato .fone{
+    footer .contato .fone {
         width: 300px;
         align-items: center;
         justify-content: center;
@@ -633,11 +633,11 @@ footer .dev{
         padding-top: 25px;
     }
 
-    footer .contato .loc{
+    footer .contato .loc {
         width: 300px;
     }
 
-    footer .contato .redes{
+    footer .contato .redes {
         justify-content: center;
         width: 300px;
         padding-bottom: 25px;
@@ -647,76 +647,76 @@ footer .dev{
 
 /* Tablets */
 @media (min-width: 601px) and (max-width: 1024px) {
-    .slider{
+    .slider {
         width: 500px;
         height: 280px;
     }
-    
-    .slide img{
+
+    .slide img {
         width: 500px;
     }
-    
-    .labels{
-        width: 500px;
-        margin-top: 240px;
-    }
-    
-    .navegacao{
+
+    .labels {
         width: 500px;
         margin-top: 240px;
     }
 
-    .quem-somos{
+    .navegacao {
+        width: 500px;
+        margin-top: 240px;
+    }
+
+    .quem-somos {
         padding: 0 70px;
         font-size: var(--tamanho-fonte2);
     }
 
-    .quem-somos-fotos img{
+    .quem-somos-fotos img {
         height: 165px;
     }
 
-    .diretoria div .nome{
+    .diretoria div .nome {
         font-size: var(--tamanho-fonte2);
     }
 
-    .diretoria div strong{
+    .diretoria div strong {
         font-size: var(--tamanho-fonte2);
     }
 
-    .diretoria div{
+    .diretoria div {
         width: 165px;
     }
 
-    .como-atuamos{
+    .como-atuamos {
         padding: 0px 70px;
         padding-bottom: 25px;
         font-size: var(--tamanho-fonte2);
     }
 
-    .campanha{
+    .campanha {
         display: flex;
         align-items: center;
         flex-direction: column;
     }
 
-    .campanha img{
+    .campanha img {
         min-width: 400px;
     }
 
-    footer{
+    footer {
         font-size: var(--tamanho-fonte1);
     }
 
-    footer .contato{
+    footer .contato {
         gap: 5px;
         flex-direction: column;
     }
 
-    footer img{
+    footer img {
         height: 24px;
     }
 
-    footer .contato .fone{
+    footer .contato .fone {
         width: 300px;
         align-items: center;
         justify-content: center;
@@ -724,11 +724,11 @@ footer .dev{
         padding-top: 25px;
     }
 
-    footer .contato .loc{
+    footer .contato .loc {
         width: 300px;
     }
 
-    footer .contato .redes{
+    footer .contato .redes {
         justify-content: center;
         width: 300px;
         padding-bottom: 25px;
