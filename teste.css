@@ -1,0 +1,302 @@
+:root {
+    --cor-principal: #23BEE1;
+    --cor-secundaria: #D76978;
+    --tamanho-fonte1: 1em;
+    --tamanho-fonte2: 1.2em;
+    --tamanho-fonte3: 1.3em;
+    --tamanho-fonte4: 1.7em;
+    --tamanho-fonte5: 2em;
+    --tamanho-fonte6: 2.2em;
+}
+
+body{
+    font-family: 'Nunito', 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+/* Conteúdo */
+
+.quem-somos {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 140px;
+    font-size: var(--tamanho-fonte3);
+    gap: 25px;
+}
+
+.quem-somos-texto {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.quem-somos-fotos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 25px;
+    gap: 25px;
+}
+
+.quem-somos-fotos img {
+    height: 180px;
+    border: solid black 2px;
+}
+
+.quem-somos-fotos strong {
+    color: var(--cor-secundaria);
+}
+
+.diretoria {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+.diretoria div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+}
+
+.diretoria div .nome {
+    margin: 5px 0;
+}
+
+.como-atuamos {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 140px;
+    padding-bottom: 25px;
+    gap: 15px;
+    font-size: var(--tamanho-fonte3);
+    background: linear-gradient(0deg, white 0%, white 0%, #D76978 100%);
+}
+
+.campanha {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.campanha img {
+    width: 50%;
+    border: solid 2px black;
+    border-radius: 15px;
+}
+
+/* */
+
+/* doar */
+
+.doar{
+    max-width: 500px;
+    border-radius: 5px;
+}
+
+/*         */
+/* pop-up */
+
+.pop-donate {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: transform 0.3s;
+}
+
+.pop-donate:hover {
+    transform: scale(1.1);
+}
+
+.pop-donate img {
+    width: 40px;
+    height: 40px;
+}
+
+#popQrCode {
+    display: none;
+    z-index: 1101;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.conteudo-qr-code {
+    background-color: white;
+    padding: 30px;
+}
+
+.conteudo-qr-code img {
+    width: 200px;
+    height: 200px;
+}
+
+.fechar {
+    top: 10px;
+    right: 15px;
+    font-size: var(--tamanho-fonte4);
+    cursor: pointer;
+    color: #333;
+}
+
+/* Responsividade */
+
+/* Smartphones */
+@media (max-width: 600px) {
+    .doar {
+        border-radius: 0px;
+        max-width: 100%;
+        margin-bottom: 35px;
+    }
+
+    .quem-somos {
+        padding: 0 50px;
+        font-size: var(--tamanho-fonte1);
+    }
+
+    .diretoria {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .quem-somos-fotos img {
+        height: 150px;
+    }
+
+    .diretoria div {
+        width: 150px;
+    }
+
+    .diretoria div .nome {
+        font-size: var(--tamanho-fonte1);
+        margin: 2px 0;
+    }
+
+    .diretoria div strong {
+        font-size: var(--tamanho-fonte1);
+    }
+
+    .como-atuamos {
+        padding: 0px 50px;
+        font-size: var(--tamanho-fonte1);
+        padding-bottom: 15px;
+    }
+
+    .campanha img {
+        width: 100%;
+        border-radius: 0px;
+        border: 0px;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+    }
+
+    footer {
+        font-size: var(--tamanho-fonte1);
+    }
+
+    footer .contato {
+        gap: 5px;
+        flex-direction: column;
+    }
+
+    footer img {
+        height: 24px;
+    }
+
+    footer .contato .fone {
+        width: 300px;
+        align-items: center;
+        justify-content: center;
+        padding: 0px;
+        padding-top: 25px;
+    }
+
+    footer .contato .loc {
+        width: 300px;
+    }
+
+    footer .contato .redes {
+        justify-content: center;
+        width: 300px;
+        padding-bottom: 25px;
+    }
+
+}
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .quem-somos {
+        padding: 0 70px;
+        font-size: var(--tamanho-fonte2);
+    }
+
+    .quem-somos-fotos img {
+        height: 165px;
+    }
+
+    .diretoria div .nome {
+        font-size: var(--tamanho-fonte2);
+    }
+
+    .diretoria div strong {
+        font-size: var(--tamanho-fonte2);
+    }
+
+    .diretoria div {
+        width: 165px;
+    }
+
+    .como-atuamos {
+        padding: 0px 70px;
+        padding-bottom: 25px;
+        font-size: var(--tamanho-fonte2);
+    }
+
+    .campanha {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .campanha img {
+        min-width: 400px;
+    }
+
+    footer {
+        font-size: var(--tamanho-fonte1);
+    }
+
+    footer .contato {
+        gap: 5px;
+        flex-direction: column;
+    }
+
+    footer img {
+        height: 24px;
+    }
+
+    footer .contato .fone {
+        width: 300px;
+        align-items: center;
+        justify-content: center;
+        padding: 0px;
+        padding-top: 25px;
+    }
+
+    footer .contato .loc {
+        width: 300px;
+    }
+
+    footer .contato .redes {
+        justify-content: center;
+        width: 300px;
+        padding-bottom: 25px;
+    }
+}
