@@ -14,84 +14,33 @@ body{
     font-size: 14px;
 }
 
-/* Conteúdo */
+/* Links */
 
-.quem-somos {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 0 140px;
-    font-size: var(--tamanho-fonte3);
-    gap: 25px;
+nav a {
+    position: relative;
 }
 
-.quem-somos-texto {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 15px;
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 8px;
+    height: 2px;
+    background-color: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
 }
 
-.quem-somos-fotos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 25px;
-    gap: 25px;
+.dropdown-toggle::after{
+    border-top: 0;
 }
 
-.quem-somos-fotos img {
-    height: 180px;
-    border: solid black 2px;
+nav a:hover::after {
+    transform: scaleX(1);
 }
 
-.quem-somos-fotos strong {
-    color: var(--cor-secundaria);
-}
-
-.diretoria {
-    display: flex;
-    flex-direction: row;
-    gap: 25px;
-}
-
-.diretoria div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 180px;
-}
-
-.diretoria div .nome {
-    margin: 5px 0;
-}
-
-.como-atuamos {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 0px 140px;
-    padding-bottom: 25px;
-    gap: 15px;
-    font-size: var(--tamanho-fonte3);
-    background: linear-gradient(0deg, white 0%, white 0%, #D76978 100%);
-}
-
-.campanha {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.campanha img {
-    width: 50%;
-    border: solid 2px black;
-    border-radius: 15px;
-}
-
-/* */
+/*       */
 
 /* doar */
 
@@ -150,51 +99,14 @@ body{
 
 /* Smartphones */
 @media (max-width: 600px) {
+    nav a::after {
+        height: 0;
+    }
+
     .doar {
         border-radius: 0px;
         max-width: 100%;
         margin-bottom: 35px;
-    }
-
-    .quem-somos {
-        padding: 0 50px;
-        font-size: var(--tamanho-fonte1);
-    }
-
-    .diretoria {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .quem-somos-fotos img {
-        height: 150px;
-    }
-
-    .diretoria div {
-        width: 150px;
-    }
-
-    .diretoria div .nome {
-        font-size: var(--tamanho-fonte1);
-        margin: 2px 0;
-    }
-
-    .diretoria div strong {
-        font-size: var(--tamanho-fonte1);
-    }
-
-    .como-atuamos {
-        padding: 0px 50px;
-        font-size: var(--tamanho-fonte1);
-        padding-bottom: 15px;
-    }
-
-    .campanha img {
-        width: 100%;
-        border-radius: 0px;
-        border: 0px;
-        border-top: 2px solid black;
-        border-bottom: 2px solid black;
     }
 
     footer {
@@ -232,41 +144,8 @@ body{
 
 /* Tablets */
 @media (min-width: 601px) and (max-width: 1024px) {
-    .quem-somos {
-        padding: 0 70px;
-        font-size: var(--tamanho-fonte2);
-    }
-
-    .quem-somos-fotos img {
-        height: 165px;
-    }
-
-    .diretoria div .nome {
-        font-size: var(--tamanho-fonte2);
-    }
-
-    .diretoria div strong {
-        font-size: var(--tamanho-fonte2);
-    }
-
-    .diretoria div {
-        width: 165px;
-    }
-
-    .como-atuamos {
-        padding: 0px 70px;
-        padding-bottom: 25px;
-        font-size: var(--tamanho-fonte2);
-    }
-
-    .campanha {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
-
-    .campanha img {
-        min-width: 400px;
+    nav a::after {
+        height: 0;
     }
 
     footer {
