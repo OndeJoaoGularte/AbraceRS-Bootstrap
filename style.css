@@ -15,6 +15,10 @@ body{
     overflow-x: hidden;
 }
 
+.wrapper{
+    overflow-x: hidden;
+}
+
 /* Links */
 
 nav a {
