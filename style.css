@@ -41,8 +41,8 @@ nav a::after {
     border-top: 0;
 }
 
-nav a:hover::after {
-    transform: scaleX(1);
+.navbar-nav a:hover::after {
+    transform: scaleX(0.9);
 }
 
 /*       */
