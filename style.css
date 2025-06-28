@@ -37,14 +37,13 @@ nav a::after {
     transition: transform 0.3s ease-in-out;
 }
 
-.dropdown-toggle::after{
-    border-top: 0;
-}
-
 .navbar-nav a:hover::after {
     transform: scaleX(0.9);
 }
 
+.dropdown-toggle::after{
+    border-top: 0;
+}
 /*       */
 
 /* doar */
@@ -53,6 +52,17 @@ nav a::after {
     max-width: 500px;
     border-radius: 5px;
 }
+
+.vakinha-link {
+    color: var(--cor-principal);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.vakinha-link:hover {
+    color: var(--cor-secundaria);
+}
+
 
 /*         */
 /* pop-up */
