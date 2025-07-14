@@ -2,15 +2,21 @@
 # Configurações Globais e Variáveis
 --------------------------------------------------------------*/
 :root {
-    --cor-primaria: #0d6efd;          /* Azul Bootstrap (mantido como base) */
-    --cor-secundaria: #1f2a38;       /* Cinza escuro/azulado */
-    --cor-light: #f8f9fa;            /* Cinza claro Bootstrap */
-    --cor-texto: #343a40;            /* Cinza escuro para texto */
+    --cor-primaria: #0d6efd;
+    /* Azul Bootstrap (mantido como base) */
+    --cor-secundaria: #1f2a38;
+    /* Cinza escuro/azulado */
+    --cor-light: #f8f9fa;
+    /* Cinza claro Bootstrap */
+    --cor-texto: #343a40;
+    /* Cinza escuro para texto */
     --font-principal: 'Nunito', sans-serif;
 
     /* Cores da Identidade Visual */
-    --cor-azul-claro: #87CEEB;        /* Azul Céu Claro - Sinta-se à vontade para ajustar */
-    --cor-vermelho-claro: #F08080;    /* Coral Claro - Sinta-se à vontade para ajustar */
+    --cor-azul-claro: #87CEEB;
+    /* Azul Céu Claro - Sinta-se à vontade para ajustar */
+    --cor-vermelho-claro: #F08080;
+    /* Coral Claro - Sinta-se à vontade para ajustar */
 }
 
 body {
@@ -22,8 +28,14 @@ body {
 /*--------------------------------------------------------------
 # Estilos Gerais (Títulos, Botões)
 --------------------------------------------------------------*/
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 800; /* Nunito mais pesado para títulos */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 800;
+    /* Nunito mais pesado para títulos */
 }
 
 .section-title {
@@ -39,13 +51,15 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
     width: 60px;
     height: 3px;
-    background: var(--cor-azul-claro); /* Usando o azul claro aqui */
+    background: var(--cor-azul-claro);
+    /* Usando o azul claro aqui */
     bottom: 0;
     left: calc(50% - 30px);
 }
 
 .btn-primary {
-    background-color: var(--cor-azul-claro); /* Botão primário em azul claro */
+    background-color: var(--cor-azul-claro);
+    /* Botão primário em azul claro */
     border-color: var(--cor-azul-claro);
     color: var(--cor-secundaria);
     padding: 12px 30px;
@@ -55,7 +69,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-primary:hover {
-    background-color: #76b5d2; /* Tom um pouco mais escuro no hover */
+    background-color: #76b5d2;
+    /* Tom um pouco mais escuro no hover */
     border-color: #76b5d2;
     transform: translateY(-3px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -63,7 +78,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-success {
-    background-color: var(--cor-vermelho-claro); /* Botão de sucesso (Vakinha) em vermelho claro */
+    background-color: var(--cor-vermelho-claro);
+    /* Botão de sucesso (Vakinha) em vermelho claro */
     border-color: var(--cor-vermelho-claro);
     color: #fff;
     padding: 12px 30px;
@@ -73,7 +89,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-success:hover {
-    background-color: #e77373; /* Tom um pouco mais escuro no hover */
+    background-color: #e77373;
+    /* Tom um pouco mais escuro no hover */
     border-color: #e77373;
     transform: translateY(-3px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -84,7 +101,8 @@ h1, h2, h3, h4, h5, h6 {
 # Header & Navbar
 --------------------------------------------------------------*/
 .navbar {
-    background-color: rgba(31, 42, 56, 0.9); /* Fundo semi-transparente */
+    background-color: rgba(31, 42, 56, 0.9);
+    /* Fundo semi-transparente */
     padding: 1rem 0;
     transition: background-color 0.3s ease;
 }
@@ -105,9 +123,12 @@ h1, h2, h3, h4, h5, h6 {
 .navbar .nav-link::after {
     content: '';
     position: absolute;
-    left: 10px; right: 10px; bottom: 0;
+    left: 10px;
+    right: 10px;
+    bottom: 0;
     height: 2px;
-    background-color: var(--cor-azul-claro); /* Azul claro no destaque do link */
+    background-color: var(--cor-azul-claro);
+    /* Azul claro no destaque do link */
     transform: scaleX(0);
     transition: transform 0.3s ease-in-out;
 }
@@ -122,22 +143,24 @@ h1, h2, h3, h4, h5, h6 {
 .hero {
     height: 70vh;
     min-height: 500px;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('imagens/foto5.jpg') no-repeat center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('imagens/foto5.jpg') no-repeat center center;
     background-size: cover;
 }
 
 .hero h1 {
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 /*--------------------------------------------------------------
 # Quem Somos & Equipe
 --------------------------------------------------------------*/
 .team-member img {
-    width: 150px; height: 150px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     border-radius: 50%;
-    border: 4px solid var(--cor-azul-claro); /* Borda das fotos da equipe em azul claro */
+    border: 4px solid var(--cor-azul-claro);
+    /* Borda das fotos da equipe em azul claro */
     transition: transform 0.3s ease;
 }
 
@@ -151,7 +174,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Alteração: A classe .text-primary usada no HTML agora será estilizada com o vermelho */
 .team-member .text-primary {
-    color: var(--cor-vermelho-claro) !important; /* Cargo da equipe em vermelho claro. !important para sobrescrever o Bootstrap */
+    color: var(--cor-vermelho-claro) !important;
+    /* Cargo da equipe em vermelho claro. !important para sobrescrever o Bootstrap */
 }
 
 /*--------------------------------------------------------------
@@ -207,7 +231,8 @@ footer h5.text-primary {
 }
 
 .social-icons a:hover {
-    color: var(--cor-azul-claro); /* Ícones sociais no hover em azul claro */
+    color: var(--cor-azul-claro);
+    /* Ícones sociais no hover em azul claro */
     transform: translateY(-3px);
 }
 
@@ -215,28 +240,70 @@ footer h5.text-primary {
 # CONTROLE PRECISO DO ESPAÇAMENTO DA EQUIPE
 --------------------------------------------------------------*/
 .team-row {
-  /*
+    /*
     >>> CONTROLE AQUI <<<
     Altere o valor abaixo para encontrar o espaçamento perfeito.
     - Valores maiores = mais espaço.
     - Valores menores = menos espaço.
     - Sugestão para o "meio termo": 1.2rem
   */
-  --bs-gutter-x: 0rem;
+    --bs-gutter-x: 0rem;
 }
+
 /*--------------------------------------------------------------
 # CRIAÇÃO DA COLUNA CUSTOMIZADA "col-xl-2.5"
 --------------------------------------------------------------*/
 @media (min-width: 1200px) {
-  .col-xl-custom {
-    flex: 0 0 auto;
-    
-    /*
+    .col-xl-custom {
+        flex: 0 0 auto;
+
+        /*
       >>> AQUI ESTÁ O CONTROLE <<<
       col-xl-2 tem 16.66% de largura.
       col-xl-3 tem 25% de largura.
       Um valor intermediário como 22% é perfeito para o "meio termo".
     */
-    width: 19%; 
-  }
+        width: 19%;
+    }
+}
+
+/*--------------------------------------------------------------
+# Seção do Evento renovaMENTE
+--------------------------------------------------------------*/
+#evento-renovamente {
+    border-bottom: 1px solid #dee2e6;
+}
+
+.event-badge {
+    background-color: var(--cor-vermelho-claro);
+    color: #fff;
+    padding: 6px 15px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.inscricoes-info {
+    background-color: #fff;
+    border-left: 5px solid var(--cor-azul-claro);
+    padding: 20px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.contact-link {
+    color: var(--cor-secundaria);
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: var(--cor-primaria);
+}
+
+.contact-link i {
+    color: var(--cor-azul-claro);
 }
