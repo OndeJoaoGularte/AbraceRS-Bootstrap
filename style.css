@@ -1,148 +1,242 @@
+/*--------------------------------------------------------------
+# Configurações Globais e Variáveis
+--------------------------------------------------------------*/
 :root {
-    --cor-principal: #23BEE1;
-    --cor-secundaria: #D76978;
-    --tamanho-fonte1: 1em;
-    --tamanho-fonte2: 1.2em;
-    --tamanho-fonte3: 1.3em;
-    --tamanho-fonte4: 1.7em;
-    --tamanho-fonte5: 2em;
-    --tamanho-fonte6: 2.2em;
+    --cor-primaria: #0d6efd;          /* Azul Bootstrap (mantido como base) */
+    --cor-secundaria: #1f2a38;       /* Cinza escuro/azulado */
+    --cor-light: #f8f9fa;            /* Cinza claro Bootstrap */
+    --cor-texto: #343a40;            /* Cinza escuro para texto */
+    --font-principal: 'Nunito', sans-serif;
+
+    /* Cores da Identidade Visual */
+    --cor-azul-claro: #87CEEB;        /* Azul Céu Claro - Sinta-se à vontade para ajustar */
+    --cor-vermelho-claro: #F08080;    /* Coral Claro - Sinta-se à vontade para ajustar */
 }
 
-body{
-    font-family: 'Nunito', 'Roboto', sans-serif;
-    font-size: 14px;
+body {
+    font-family: var(--font-principal);
+    color: var(--cor-texto);
     overflow-x: hidden;
 }
 
-.wrapper{
-    overflow-x: hidden;
+/*--------------------------------------------------------------
+# Estilos Gerais (Títulos, Botões)
+--------------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 800; /* Nunito mais pesado para títulos */
 }
 
-/* Links */
-
-nav a {
+.section-title {
+    font-size: 2.5rem;
+    color: var(--cor-secundaria);
     position: relative;
+    padding-bottom: 15px;
 }
 
-nav a::after {
+.section-title::after {
     content: '';
     position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 8px;
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--cor-azul-claro); /* Usando o azul claro aqui */
+    bottom: 0;
+    left: calc(50% - 30px);
+}
+
+.btn-primary {
+    background-color: var(--cor-azul-claro); /* Botão primário em azul claro */
+    border-color: var(--cor-azul-claro);
+    color: var(--cor-secundaria);
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #76b5d2; /* Tom um pouco mais escuro no hover */
+    border-color: #76b5d2;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    color: var(--cor-secundaria);
+}
+
+.btn-success {
+    background-color: var(--cor-vermelho-claro); /* Botão de sucesso (Vakinha) em vermelho claro */
+    border-color: var(--cor-vermelho-claro);
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+    background-color: #e77373; /* Tom um pouco mais escuro no hover */
+    border-color: #e77373;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Header & Navbar
+--------------------------------------------------------------*/
+.navbar {
+    background-color: rgba(31, 42, 56, 0.9); /* Fundo semi-transparente */
+    padding: 1rem 0;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-scrolled {
+    background-color: var(--cor-secundaria);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .nav-link {
+    color: #fff;
+    font-weight: 700;
+    margin: 0 10px;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.navbar .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 10px; right: 10px; bottom: 0;
     height: 2px;
-    background-color: white;
+    background-color: var(--cor-azul-claro); /* Azul claro no destaque do link */
     transform: scaleX(0);
     transition: transform 0.3s ease-in-out;
 }
 
-.navbar-nav a:hover::after {
-    transform: scaleX(0.9);
+.navbar .nav-link:hover::after {
+    transform: scaleX(1);
 }
 
-.dropdown-toggle::after{
-    border-top: 0;
-}
-/*       */
-
-/* doar */
-
-.doar{
-    max-width: 500px;
-    border-radius: 5px;
+/*--------------------------------------------------------------
+# Seção Hero (Inicial)
+--------------------------------------------------------------*/
+.hero {
+    height: 70vh;
+    min-height: 500px;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('imagens/foto5.jpg') no-repeat center center;
+    background-size: cover;
 }
 
-.vakinha-link {
-    color: var(--cor-principal);
-    text-decoration: none;
-    transition: color 0.3s ease;
+.hero h1 {
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
 }
 
-.vakinha-link:hover {
-    color: var(--cor-secundaria);
+/*--------------------------------------------------------------
+# Quem Somos & Equipe
+--------------------------------------------------------------*/
+.team-member img {
+    width: 150px; height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--cor-azul-claro); /* Borda das fotos da equipe em azul claro */
+    transition: transform 0.3s ease;
 }
 
-
-/*         */
-/* pop-up */
-
-.pop-donate {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 1000;
-    transition: transform 0.3s;
-}
-
-.pop-donate:hover {
+.team-member img:hover {
     transform: scale(1.1);
 }
 
-.pop-donate img {
-    width: 40px;
-    height: 40px;
+.team-member h5 {
+    color: var(--cor-secundaria);
 }
 
-#popQrCode {
-    display: none;
-    z-index: 1101;
-    background-color: rgba(0, 0, 0, 0.7);
+/* Alteração: A classe .text-primary usada no HTML agora será estilizada com o vermelho */
+.team-member .text-primary {
+    color: var(--cor-vermelho-claro) !important; /* Cargo da equipe em vermelho claro. !important para sobrescrever o Bootstrap */
 }
 
-.conteudo-qr-code {
-    background-color: white;
-    padding: 30px;
+/*--------------------------------------------------------------
+# Carrossel
+--------------------------------------------------------------*/
+.carousel {
+    border-radius: 15px;
+    overflow: hidden;
 }
 
-.conteudo-qr-code img {
-    width: 200px;
-    height: 200px;
+.carousel-item img {
+    max-height: 400px;
+    object-fit: cover;
 }
 
-.fechar {
-    top: 10px;
-    right: 15px;
-    font-size: var(--tamanho-fonte4);
-    cursor: pointer;
-    color: #333;
+/*--------------------------------------------------------------
+# Seção de Doação
+--------------------------------------------------------------*/
+.donation-card {
+    background-color: var(--cor-light);
+    border-radius: 15px;
+    border: 1px solid #dee2e6;
+    height: 100%;
 }
 
-/* Footer  */
-.redes a {
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+.pix-key {
+    background-color: #e9ecef;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1rem;
+    word-break: break-all;
 }
 
-.redes a img {
-    height: 24px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+/*--------------------------------------------------------------
+# Rodapé
+--------------------------------------------------------------*/
+footer {
+    background-color: var(--cor-secundaria);
 }
 
-.redes a:hover {
-    transform: scale(1.2);
-}
-/*         */
-
-/* Responsividade */
-
-/* Smartphones */
-@media (max-width: 600px) {
-    nav a::after {
-        height: 0;
-    }
-
-    .doar {
-        border-radius: 0px;
-        max-width: 100%;
-        margin-bottom: 35px;
-    }
+/* Alteração: Aplicando a cor no título do footer diretamente */
+footer h5.text-primary {
+    color: var(--cor-azul-claro) !important;
 }
 
-/* Tablets */
-@media (min-width: 601px) and (max-width: 1024px) {
-    nav a::after {
-        height: 0;
-    }
+.footer-bottom {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.social-icons a {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--cor-azul-claro); /* Ícones sociais no hover em azul claro */
+    transform: translateY(-3px);
+}
+
+/*--------------------------------------------------------------
+# CONTROLE PRECISO DO ESPAÇAMENTO DA EQUIPE
+--------------------------------------------------------------*/
+.team-row {
+  /*
+    >>> CONTROLE AQUI <<<
+    Altere o valor abaixo para encontrar o espaçamento perfeito.
+    - Valores maiores = mais espaço.
+    - Valores menores = menos espaço.
+    - Sugestão para o "meio termo": 1.2rem
+  */
+  --bs-gutter-x: 0rem;
+}
+/*--------------------------------------------------------------
+# CRIAÇÃO DA COLUNA CUSTOMIZADA "col-xl-2.5"
+--------------------------------------------------------------*/
+@media (min-width: 1200px) {
+  .col-xl-custom {
+    flex: 0 0 auto;
+    
+    /*
+      >>> AQUI ESTÁ O CONTROLE <<<
+      col-xl-2 tem 16.66% de largura.
+      col-xl-3 tem 25% de largura.
+      Um valor intermediário como 22% é perfeito para o "meio termo".
+    */
+    width: 19%; 
+  }
 }
