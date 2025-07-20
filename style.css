@@ -2,21 +2,17 @@
 # Configurações Globais e Variáveis
 --------------------------------------------------------------*/
 :root {
-    --cor-primaria: #0d6efd;
-    /* Azul Bootstrap (mantido como base) */
-    --cor-secundaria: #1f2a38;
-    /* Cinza escuro/azulado */
-    --cor-light: #f8f9fa;
-    /* Cinza claro Bootstrap */
-    --cor-texto: #343a40;
-    /* Cinza escuro para texto */
+    --cor-primaria: #0d6efd;          /* Azul Bootstrap (mantido como base) */
+    --cor-secundaria: #1f2a38;       /* Cinza escuro/azulado */
+    --cor-light: #f8f9fa;            /* Cinza claro Bootstrap */
+    --cor-texto: #343a40;            /* Cinza escuro para texto */
     --font-principal: 'Nunito', sans-serif;
 
-    /* Cores da Identidade Visual */
-    --cor-azul-claro: #87CEEB;
-    /* Azul Céu Claro - Sinta-se à vontade para ajustar */
-    --cor-vermelho-claro: #F08080;
-    /* Coral Claro - Sinta-se à vontade para ajustar */
+    /* == NOVAS CORES REFINADAS == */
+    /* Em vez do azul céu, um tom de azul mais sério e acinzentado. */
+    --cor-azul-claro: #7795a8;
+    /* Em vez do coral, um tom de rosa queimado/terracota, mais elegante. */
+    --cor-vermelho-claro: #d1a3a4;
 }
 
 body {
@@ -234,76 +230,4 @@ footer h5.text-primary {
     color: var(--cor-azul-claro);
     /* Ícones sociais no hover em azul claro */
     transform: translateY(-3px);
-}
-
-/*--------------------------------------------------------------
-# CONTROLE PRECISO DO ESPAÇAMENTO DA EQUIPE
---------------------------------------------------------------*/
-.team-row {
-    /*
-    >>> CONTROLE AQUI <<<
-    Altere o valor abaixo para encontrar o espaçamento perfeito.
-    - Valores maiores = mais espaço.
-    - Valores menores = menos espaço.
-    - Sugestão para o "meio termo": 1.2rem
-  */
-    --bs-gutter-x: 0rem;
-}
-
-/*--------------------------------------------------------------
-# CRIAÇÃO DA COLUNA CUSTOMIZADA "col-xl-2.5"
---------------------------------------------------------------*/
-@media (min-width: 1200px) {
-    .col-xl-custom {
-        flex: 0 0 auto;
-
-        /*
-      >>> AQUI ESTÁ O CONTROLE <<<
-      col-xl-2 tem 16.66% de largura.
-      col-xl-3 tem 25% de largura.
-      Um valor intermediário como 22% é perfeito para o "meio termo".
-    */
-        width: 19%;
-    }
-}
-
-/*--------------------------------------------------------------
-# Seção do Evento renovaMENTE
---------------------------------------------------------------*/
-#evento-renovamente {
-    border-bottom: 1px solid #dee2e6;
-}
-
-.event-badge {
-    background-color: var(--cor-vermelho-claro);
-    color: #fff;
-    padding: 6px 15px;
-    border-radius: 50px;
-    font-size: 0.8rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.inscricoes-info {
-    background-color: #fff;
-    border-left: 5px solid var(--cor-azul-claro);
-    padding: 20px 25px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-}
-
-.contact-link {
-    color: var(--cor-secundaria);
-    text-decoration: none;
-    font-weight: 700;
-    transition: color 0.3s ease;
-}
-
-.contact-link:hover {
-    color: var(--cor-primaria);
-}
-
-.contact-link i {
-    color: var(--cor-azul-claro);
 }
