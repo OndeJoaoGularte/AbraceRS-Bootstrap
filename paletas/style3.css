@@ -1,12 +1,15 @@
 /*--------------------------------------------------------------
-# PALETA "TERRA E CÉU GAÚCHO" - VERSÃO REFINADA
+# OPÇÃO 2: PALETA "ACOLHIMENTO E AÇÃO"
 --------------------------------------------------------------*/
 :root {
-    --cor-primaria: #027581;     /* Azul Petróleo */ /* #3498db; */
-    --cor-secundaria: #e74c3c;   /* Terracota */ /* #c0392b; */
-    --cor-destaque: #F1C40F;     /* Amarelo Ouro */
-    --cor-fundo: #f5f5dc;        /* Bege Pedra */
-    --cor-texto: #4a4a4a;        /* Grafite */
+    /* Paleta Principal */
+    --cor-primaria: #D9534F;     /* Terracota / Vermelho Acolhedor */
+    --cor-secundaria: #027581;   /* Azul Petróleo */
+    --cor-destaque: #F0AD4E;     /* Laranja/Mostarda Vibrante */
+
+    /* Cores de Base */
+    --cor-fundo: #FEFBF6;        /* Fundo Areia/Off-white */
+    --cor-texto: #5D4037;        /* Texto Marrom Escuro */
     --font-principal: 'Nunito', sans-serif;
 }
 
@@ -22,12 +25,12 @@ body {
 --------------------------------------------------------------*/
 h1, h2, h3, h4, h5, h6 {
     font-weight: 800;
-    color: var(--cor-secundaria); /* Títulos em terracota */
+    color: var(--cor-primaria); /* Títulos em terracota */
 }
 
 .section-title {
     font-size: 2.5rem;
-    color: var(--cor-secundaria);
+    color: var(--cor-primaria); /* Título em azul */
     position: relative;
     padding-bottom: 15px;
 }
@@ -38,14 +41,14 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
     width: 60px;
     height: 3px;
-    background: var(--cor-primaria); /* Detalhe em azul petróleo */
+    background: var(--cor-secundaria); /* Detalhe em verde */
     bottom: 0;
     left: calc(50% - 30px);
 }
 
 .btn-primary {
-    background-color: var(--cor-primaria);
-    border-color: var(--cor-primaria);
+    background-color: var(--cor-secundaria); /* Botão principal em azul petróleo */
+    border-color: var(--cor-secundaria);
     color: #fff;
     padding: 12px 30px;
     border-radius: 50px;
@@ -54,17 +57,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-primary:hover {
-    background-color: #015C65; /* Tom mais escuro do azul petróleo */
-    border-color: #015C65;
+    background-color: #015c65;
+    border-color: #015c65;
     transform: translateY(-3px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     color: #fff;
 }
 
+/* Botão da Vakinha/Doação usa a cor de destaque */
 .btn-success {
     background-color: var(--cor-destaque);
     border-color: var(--cor-destaque);
-    color: var(--cor-texto); /* Texto escuro para melhor contraste com o amarelo */
+    color: #fff;
     padding: 12px 30px;
     border-radius: 50px;
     font-weight: 700;
@@ -72,24 +76,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-success:hover {
-    background-color: #D4AC0D; /* Tom mais escuro do amarelo ouro */
-    border-color: #D4AC0D;
+    background-color: #ec971f;
+    border-color: #ec971f;
     transform: translateY(-3px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    color: var(--cor-texto);
+    color: #fff;
 }
 
 /*--------------------------------------------------------------
 # Header & Navbar
 --------------------------------------------------------------*/
 .navbar {
-    background-color: rgba(74, 74, 74, 0.95); /* Cor de texto com mais opacidade */
+    background-color: rgba(93, 64, 55, 0.9); /* Marrom texto com transparência */
     padding: 1rem 0;
     transition: background-color 0.3s ease;
 }
 
 .navbar-scrolled {
-    background-color: var(--cor-texto);
+    background-color: var(--cor-texto); /* Fundo marrom sólido */
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -98,7 +102,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     margin: 0 10px;
     position: relative;
-    padding-bottom: 0px;
+    padding-bottom: 8px;
 }
 
 .navbar .nav-link::after {
@@ -108,7 +112,7 @@ h1, h2, h3, h4, h5, h6 {
     right: 10px;
     bottom: 0;
     height: 2px;
-    background-color: var(--cor-destaque); /* Destaque em amarelo ouro */
+    background-color: var(--cor-destaque); /* Destaque em laranja */
     transform: scaleX(0);
     transition: transform 0.3s ease-in-out;
 }
@@ -140,7 +144,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 150px;
     object-fit: cover;
     border-radius: 50%;
-    border: 2px solid var(--cor-primaria); /* Borda azul petróleo */
+    border: 4px solid var(--cor-primaria); /* Borda em terracota */
     transition: transform 0.3s ease;
 }
 
@@ -149,11 +153,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .team-member h5 {
-    color: var(--cor-texto);
+    color: var(--cor-texto); /* Nomes em marrom escuro */
 }
 
 .team-member .text-primary {
-    color: var(--cor-secundaria) !important; /* Cargos em terracota */
+    color: var(--cor-secundaria) !important; /* Cargos em azul petróleo */
 }
 
 /*--------------------------------------------------------------
@@ -173,7 +177,7 @@ h1, h2, h3, h4, h5, h6 {
 # Seção de Doação
 --------------------------------------------------------------*/
 .donation-card {
-    background-color: #ffffff;
+    background-color: #ffffff; /* Fundo branco para destaque */
     border-radius: 15px;
     border: 1px solid #dee2e6;
     height: 100%;
@@ -190,11 +194,11 @@ h1, h2, h3, h4, h5, h6 {
 # Rodapé
 --------------------------------------------------------------*/
 footer {
-    background-color: var(--cor-texto);
+    background-color: var(--cor-texto); /* Rodapé em marrom escuro */
 }
 
 footer h5.text-primary {
-    color: var(--cor-fundo) !important; /* Títulos do rodapé em bege */
+    color: var(--cor-fundo) !important; /* Títulos do footer na cor de areia */
 }
 
 .footer-bottom {
@@ -202,13 +206,13 @@ footer h5.text-primary {
 }
 
 .social-icons a {
-    color: rgba(245, 245, 220, 0.7); /* Ícones em tom de bege, com transparência */
+    color: rgba(253, 245, 230, 0.7);
     font-size: 1.5rem;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-icons a:hover {
-    color: var(--cor-destaque); /* Hover em amarelo ouro */
+    color: var(--cor-destaque); /* Ícones no hover em laranja */
     transform: translateY(-3px);
 }
 
@@ -216,11 +220,11 @@ footer h5.text-primary {
 # Seção do Evento renovaMENTE
 --------------------------------------------------------------*/
 #evento-renovamente {
-    border-bottom: 1px solid #dddcd3; /* Linha de separação mais suave */
+    border-bottom: 1px solid #dee2e6;
 }
 
 .event-badge {
-    background-color: var(--cor-secundaria); /* Badge em terracota */
+    background-color: var(--cor-primaria); /* Badge em terracota */
     color: #fff;
     padding: 6px 15px;
     border-radius: 50px;
@@ -232,7 +236,7 @@ footer h5.text-primary {
 
 .inscricoes-info {
     background-color: #fff;
-    border-left: 5px solid var(--cor-primaria); /* Destaque em azul petróleo */
+    border-left: 5px solid var(--cor-secundaria); /* Destaque em azul petróleo */
     padding: 20px 25px;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
@@ -250,26 +254,5 @@ footer h5.text-primary {
 }
 
 .contact-link i {
-    color: var(--cor-primaria);
-}
-
-/*--------------------------------------------------------------
-# AJUSTES PARA O MENU MOBILE (NOVO)
---------------------------------------------------------------*/
-@media (max-width: 991px) {
-  .navbar .nav-item {
-    padding: 10px 0; /* Espaçamento vertical de 10px entre os links */
-    text-align: center;
-  }
-
-  .navbar .nav-link {
-    display: inline-block;
-    padding-bottom: 5px;
-    margin: 0; /* Remove margens laterais */
-  }
-
-  /* Esconde a linha de animação amarela no mobile */
-  .navbar .nav-link::after {
-    display: none;
-  }
+    color: var(--cor-secundaria); /* Ícone do WhatsApp em azul petróleo */
 }
